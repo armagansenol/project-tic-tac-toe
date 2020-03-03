@@ -1,0 +1,145 @@
+body {
+    overflow: hidden;
+    background-color: burlywood;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.grid-container {
+    cursor: not-allowed;
+    display: grid;
+    opacity: 0;
+    height: 420px;
+    width: 420px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: #ffebcd;
+    color: rgb(24, 24, 24);
+    border: 1px solid black;
+    animation: fadein 3s forwards;
+    animation-delay: 0.5s;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(24, 24, 24);
+    font-size: 50px;
+}
+
+.main-content {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 45vh;
+    margin-left: 5%;
+    z-index: -1;
+    font-size: 40px;
+}
+
+.title-info {
+    opacity: 0;
+    font-size: 15px;
+    margin-left: 5px;
+    animation: fadein 3s forwards;
+    animation-delay: 2s;
+}
+
+.black-screen {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: none;
+    animation: fadein80 4s forwards;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.restart-screen {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: none;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: none;  
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    animation: fadein 3s forwards;
+    animation-delay: 2s;
+}
+
+.end-note {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    font-size: 90px;
+    width: 500px;
+    height: 100px;
+    color: whitesmoke;
+    background-color: none;
+}
+
+.restart-btn {
+    opacity: 1;
+    margin-top: 30px;
+    font-size: 20px;
+    width: 450px;
+    height: 50px;
+    background-color: darkred;
+    border: 1px solid black;
+}
+
+.row1 {
+    border-bottom: none;
+}
+
+.row2 {
+    border-bottom: none;
+}
+
+.col1 {
+    border-right: none;
+}
+
+.col2 {
+    border-right: none;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein80 {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+}
